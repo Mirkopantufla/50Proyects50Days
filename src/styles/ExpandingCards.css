@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
-    border-radius: 50px;
+    border-radius: 25px;
     color: #fff;
     cursor: pointer;
     flex: 0.3;
@@ -22,7 +22,7 @@
 }
 
 .panel.active {
-    flex: 5;
+    flex: 3;
 }
 
 .panel.active h3 {
@@ -34,6 +34,7 @@
     .container {
         width: 100vw;
     }
+
 
     .panel:nth-of-type(4),
     .panel:nth-of-type(5) {

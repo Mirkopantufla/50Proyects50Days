@@ -16,8 +16,6 @@ const ExpandingCards = () => {
     const removeActiveClases = () => {
         const panels = document.querySelectorAll('.panel')
 
-        console.log(panels)
-
         panels.forEach((pan) => (
             pan.classList.remove('active')
         ))
@@ -30,6 +28,7 @@ const ExpandingCards = () => {
                     photos.map((foto, index) => {
                         return (
                             <div
+                                key={index}
                                 id={`card${index}`}
                                 className={`panel`}
                                 style={{ backgroundImage: `url(${foto[1]})` }}

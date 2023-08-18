@@ -1,0 +1,26 @@
+.customRounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    border: 5px solid #aeaeae;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: -15px;
+}
+
+.blurBorderPrimary {
+    animation: blur-circle 1000ms ease forwards;
+}
+
+@keyframes blur-circle {
+    0% {
+        border: 5px solid #aeaeae;
+    }
+
+    100% {
+        border: 5px solid #007bff;
+    }
+}
