@@ -5,21 +5,15 @@ const ProgressSteps = () => {
 
     const [progress, setProgress] = useState(0);
 
-    const addProgress = (e) => {
+    const changeProgress = (e) => {
+        const currentButton = e.target.id;
         const btnPrevious = document.getElementById('btnPrevious');
-
-        if (progress < 3) {
-            setProgress(progress + 1)
-            btnPrevious.classList.remove('disabled')
-        }
-
-    }
-
-    const restProgress = (e) => {
-
         const btnNext = document.getElementById('btnNext');
 
-        if (progress > 0) {
+        if (progress < 3 && currentButton == 'btnNext') {
+            setProgress(progress + 1)
+            btnPrevious.classList.remove('disabled')
+        } else if (progress > 0 && currentButton == 'btnPrevious') {
             setProgress(progress - 1)
             btnNext.classList.remove('disabled')
         }
@@ -27,7 +21,7 @@ const ProgressSteps = () => {
     }
 
     return (
-        <div className='row' >
+        <div className='row my-5' >
             <div className="col-12 d-flex justify-content-center" style={{ maxWidth: "90vw" }}>
                 <section className='position-relative' style={{ width: '30vw' }}>
                     <div
@@ -40,7 +34,6 @@ const ProgressSteps = () => {
                         style={{ backgroundColor: 'white' }}
                     >
                         <div
-                            value
                             className='customRounded border-primary'>
                             1
                         </div>
@@ -61,17 +54,17 @@ const ProgressSteps = () => {
                         </div>
                         <div className="progress-bar h-25" style={{ width: `${33 * progress}%` }} />
                     </div>
-                    <div className='mt-3 d-flex justify-content-center'>
+                    <div className='mt-4 d-flex justify-content-center'>
                         <button
                             id='btnPrevious'
                             className={`btn btn-primary me-4 ${progress == 0 ? 'disabled' : ""}`}
-                            onClick={(e) => restProgress(e)}>
+                            onClick={(e) => changeProgress(e)}>
                             Previous
                         </button>
                         <button
                             id='btnNext'
                             className={`btn btn-primary ${progress == 3 ? 'disabled' : ""}`}
-                            onClick={(e) => addProgress(e)}>
+                            onClick={(e) => changeProgress(e)}>
                             Next
                         </button>
                     </div>
