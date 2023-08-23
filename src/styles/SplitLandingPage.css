@@ -1,0 +1,40 @@
+.left-div {
+    background: url('../images/nintendo-switch.jpg') no-repeat center center/cover;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: all 2s ease;
+}
+
+.right-div {
+    background: url('../images/play-5.jpg') no-repeat center center/cover;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: all 2s ease;
+}
+
+.selected:hover {
+    flex: 3;
+}
+
+.btnSeeMore {
+    background-color: rgba(81, 81, 204, 0);
+    font-size: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding-inline: 20px;
+    padding-block: 10px;
+
+}
+
+.btnSeeMore:hover {
+    background-color: rgb(162, 106, 215);
+    border: 3px solid rgb(162, 106, 215);
+}

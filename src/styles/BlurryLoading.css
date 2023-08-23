@@ -1,0 +1,17 @@
+.backImage {
+
+    background: url('../images/lake.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 70vh;
+    width: 70vw;
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.percentage {
+    background-color: rgba(0, 0, 0, 0.515);
+    border-radius: 25px;
+    padding: 10px;
+    font-size: 50px;
+    color: #fff;
+}
